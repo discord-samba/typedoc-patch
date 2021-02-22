@@ -5,8 +5,9 @@ module.exports = function(Handlebars)
 		'Enumeration': 'Enumerations',
 		'Class': 'Classes',
 		'Interface': 'Interfaces',
-		'Type alias': 'Type Aliases',
-		'Function': 'Functions'
+		'Type alias': 'Type aliases',
+		'Function': 'Functions',
+		'Variable': 'Variables'
 	};
 	
 	Handlebars.registerHelper('useKind', value =>
