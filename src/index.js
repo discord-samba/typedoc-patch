@@ -9,20 +9,20 @@ module.exports = function(Handlebars)
 		'Function': 'Functions',
 		'Variable': 'Variables'
 	};
-	
+
 	Handlebars.registerHelper('useKind', value =>
 	{
 		if (usedKinds.includes(value))
-		return;
-		
+			return;
+
 		usedKinds.push(value);
 		return pluralizations[value];
 	});
-	
+
 	Handlebars.registerHelper('resetUsedKinds', () =>
 	{
 		usedKinds = [];
 	});
-	
-	Handlebars.registerHelper('wasKindUsed', value => usedKinds.includes(value));	
+
+	Handlebars.registerHelper('wasKindUsed', value => usedKinds.includes(value));
 };
